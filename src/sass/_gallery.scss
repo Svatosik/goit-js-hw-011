@@ -24,14 +24,14 @@
 .photo-card {
   display: flex;
   flex-direction: column;
-  flex-basis: calc((100% - 40px) / 4);
-  box-shadow: 0px 4px 16px -7px rgba(0, 0, 0, 0.75);
+  flex-basis: calc((100% - 100px) / 4);
+  box-shadow: 0px 4px 16px -10px rgba(0, 0, 0, 0.75);
   border-radius: 10px;
   overflow: hidden;
 }
 
 .photo-card a {
-  height: 300px;
+  height: 250px;
 }
 
 .photo-card img {
@@ -51,10 +51,10 @@
   text-align: center;
 }
 
-.info-icon{
-    height: 16px;
-    width: 16px;
-    margin: auto;
+.info-icon {
+  height: 16px;
+  width: 16px;
+  margin: auto;
 }
 .load-more {
   display: block;
@@ -62,11 +62,12 @@
   cursor: pointer;
   margin: auto;
   margin-top: 10px;
-  padding: 10px 6px 10px;
+  margin-bottom: 10px;
   color: white;
   background-color: rgba(38, 53, 255, 0.5);
   border-radius: 5px;
   height: 100%;
+  padding: 10px 6px 10px;
 }
 .load-more:focus {
   outline: 2px solid #dadada;
