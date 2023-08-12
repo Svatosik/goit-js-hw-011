@@ -7,6 +7,7 @@ import PixabayAPI from './js/pixabay-api';
 const pixabayInstanse = new PixabayAPI();
 
 let lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
   captionDelay: 250,
 });
 
@@ -15,8 +16,8 @@ const inputEl = document.querySelector('input');
 const galleryEl = document.querySelector('.gallery');
 const loadMoreBtn = document.querySelector('.load-more');
 
-galleryEl.addEventListener('click', handleGalleryClick);
 loadMoreBtn.classList.add('hidden');
+galleryEl.addEventListener('click', handleGalleryClick);
 searchFormEl.addEventListener('submit', handleSearchFormSubmit);
 loadMoreBtn.addEventListener('click', handleLoadMore);
 function createMarkup(data) {
