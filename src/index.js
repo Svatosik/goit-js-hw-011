@@ -123,7 +123,7 @@ async function handleSearchFormSubmit(event) {
     } else {
       Notiflix.Notify.success(`Hooray! We found ${totalHits} images.`);
     }
-    
+
     if (totalHits > pixabayInstanse.per_page) {
       loadMoreBtn.classList.remove('hidden');
     }

@@ -12,7 +12,7 @@ export default class PixabayAPI {
   };
   page = 1;
   query = null;
-  per_page = 100;
+  per_page = 40;
   totalHits = 0;
 
   async fetchImages() {
