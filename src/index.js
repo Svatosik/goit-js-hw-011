@@ -16,11 +16,14 @@ const inputEl = document.querySelector('input');
 const galleryEl = document.querySelector('.gallery');
 const loadMoreBtn = document.querySelector('.load-more');
 
+
+
 loadMoreBtn.classList.add('hidden');
 galleryEl.addEventListener('click', handleGalleryClick);
 searchFormEl.addEventListener('submit', handleSearchFormSubmit);
 loadMoreBtn.addEventListener('click', handleLoadMore);
-function createMarkup(data) {
+
+function createCard(data) {
   return data
     .map(
       ({
@@ -79,7 +82,7 @@ async function handleLoadMore() {
       );
     }
 
-    galleryEl.insertAdjacentHTML('beforeend', createMarkup(hits));
+    galleryEl.insertAdjacentHTML('beforeend', createCard(hits));
     lightbox.refresh();
 
     const totalPages = Math.ceil(
@@ -112,6 +115,7 @@ async function handleSearchFormSubmit(event) {
   loadMoreBtn.classList.add('hidden');
   pixabayInstanse.query = inputValue;
   pixabayInstanse.page = 1;
+  
   try {
     const {
       data: { totalHits, hits },
@@ -131,8 +135,8 @@ async function handleSearchFormSubmit(event) {
 
     pixabayInstanse.page += 1;
     pixabayInstanse.totalHits = totalHits;
-
-    galleryEl.insertAdjacentHTML('beforeend', createMarkup(hits));
+    
+    galleryEl.insertAdjacentHTML('beforeend', createCard(hits));
     lightbox.refresh();
   } catch (error) {
     console.error(error);

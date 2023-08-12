@@ -1,3 +1,9 @@
+html {
+  scroll-behavior: smooth;
+}
+body{
+  position: relative;
+}
 .header {
   position: sticky;
   display: flex;
