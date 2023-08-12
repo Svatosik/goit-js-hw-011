@@ -3,12 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
+    <title>Homework 11</title>
     <link rel="stylesheet" href="./sass/index.scss" />
+    <link rel="stylesheet" href="./css/index.css">
     <script type="module" src="./index.js"></script>
   </head>
   <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+    <header class="header">
+      <form class="search-form">
+        <input
+          type="text"
+          class="input"
+          autocomplete="off"
+          placeholder="Serching images..."
+        />
+        <button class="btn" type="submit">
+          <ion-icon name="search-outline" class="btn-svg"></ion-icon>
+        </button>
+      </form>
+    </header>
+    <div class="gallery">
+      <!-- Картки зображень -->
+    </div>
+    <button class="load-more hidden" type="button">Load more...</button>
+    <script src="https://unpkg.com/ionicons@latest/dist/ionicons.js"></script>
   </body>
 </html>

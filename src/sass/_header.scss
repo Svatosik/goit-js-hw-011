@@ -1,0 +1,38 @@
+.header {
+  position: sticky;
+  display: flex;
+  justify-content: center;
+  background-color: rgba(38, 53, 255, 0.5);
+  margin-bottom: 30px;
+}
+.search-form {
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  height: 30px;
+}
+.input {
+  border: none;
+  border-radius: 5px 0 0 5px;
+}
+.btn {
+  background: white;
+  padding-top: 5px;
+  display: block;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+}
+.btn-svg {
+  width: 16px;
+  height: 16px;
+}
+.input:focus {
+  outline: none;
+  border: 2px solid #dadada;
+  border-right: none;
+}
+.input:focus ~ .btn {
+  border: 2px solid #dadada;
+  border-left: none;
+}
